@@ -1,0 +1,163 @@
+.mint-page {
+  background-color: rgba(0, 0, 0, 0.46);
+  background-image: url(/assets/images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .content {
+    background-color: rgba(0, 0, 0, 0.46);
+    min-height: 100vh;
+    @apply py-32 md:py-20 bg-cover overflow-hidden;
+
+    .mask {
+      @apply sm:container mx-auto px-6;
+
+      @media (min-width: 768px) {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      @media (min-width: 1280px) {
+        max-width: 80rem;
+      }
+    }
+
+    .banner {
+      @apply mx-auto pt-24 text-center text-white;
+      max-width: 42rem;
+
+      p {
+        @apply text-xl mt-7;
+      }
+
+      .btn-actions {
+        margin-top: 4.5rem;
+        @apply flex justify-center gap-7;
+
+        @media (max-width: 576px) {
+          @apply flex-col items-center;
+        }
+      }
+    }
+  }
+
+  .btn-mint {
+    @apply w-auto cursor-pointer rounded-xl border-none uppercase px-8 py-4 mx-4 no-underline;
+
+    box-shadow: #ff7272 0px 0px 14px;
+    background-image: linear-gradient(
+      160.85deg,
+      #ffce1b 18.73%,
+      #dd4700 97.99%
+    );
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: #ff7272 0px 0px 24px;
+    }
+  }
+}
+
+.bg-image {
+  @apply absolute w-full h-full object-cover;
+  z-index: -1;
+}
+
+.section-header {
+  @apply mx-auto text-center text-gray-50;
+  max-width: 50rem;
+
+  h2 {
+    @apply text-5xl mt-5 mb-8 leading-none font-bold;
+  }
+
+  h3 {
+    @apply inline pl-1 text-xl tracking-wider uppercase border-l-2 border-pink-600;
+  }
+
+  p {
+    @apply text-xl leading-normal text-gray-100;
+  }
+}
+
+.section-header h3 {
+  border-color: #ff5200;
+}
+
+.nft-panel {
+  @apply relative flex flex-col justify-center mx-auto my-4;
+  .title {
+    color: rgb(255, 214, 66);
+    font-size: 22px;
+  }
+
+  .nft-counter {
+    @apply relative flex justify-center items-center;
+
+    svg {
+      margin: 0px 22px;
+      cursor: pointer;
+      will-change: transform;
+      transition: all 0.3s linear 0s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .amount {
+      width: 125px;
+      font-size: 87px;
+      text-align: center;
+      line-height: normal;
+      letter-spacing: -0.05em;
+      font-weight: 900;
+    }
+
+    ~ button {
+      @apply absolute text-white top-2/4 right-0 m-0 bg-transparent outline-none cursor-pointer align-middle appearance-none border-none text-2xl underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        @apply relative right-0;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes animStar {
+  from {
+    -webkit-transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(-2000px);
+  }
+}
+@-moz-keyframes animStar {
+  from {
+    -moz-transform: translateY(0px);
+  }
+  to {
+    -moz-transform: translateY(-2000px);
+  }
+}
+@-ms-keyframes animStar {
+  from {
+    -ms-transform: translateY(0px);
+  }
+  to {
+    -ms-transform: translateY(-2000px);
+  }
+}
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
